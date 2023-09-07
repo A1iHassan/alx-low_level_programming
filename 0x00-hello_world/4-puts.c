@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- *
- *
+ * some discription lines
+ * bla bla bla
+ * this is my code
  */
 int main(void)
 {
