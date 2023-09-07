@@ -15,7 +15,7 @@ int main(void)
 	ssize_t bytes_written = write(STDERR_FILENO, message, message_length);
 	if (bytes_written == -1)
 	{
-		perror("write");
+		strerror("write");
 		return 1;
 	}
 	return 0;
