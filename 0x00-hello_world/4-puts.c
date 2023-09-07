@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
- * some discription lines
- * bla bla bla
- * this is my code
+ * main - Entry point
+ *
+ * Discription: this is my code
+ *
+ * Return: bla bla bla
  */
 int main(void)
 {
