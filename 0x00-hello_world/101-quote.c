@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include <string.h>
+#include <stdio.h>
 /**
  *
  * main - Entry
@@ -10,13 +10,6 @@
  */
 int main(void)
 {
-	const char message[300] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	size_t message_length = strlen(message);
-	ssize_t bytes_written = write(STDERR_FILENO, message, message_length);
-	if (bytes_written == -1)
-	{
-		strerror("write");
-		return 1;
-	}
+	fput("\"and that piece of art is useful\" - Dora Korpar, 2015-10-19")
 	return 0;
 }
