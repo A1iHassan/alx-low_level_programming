@@ -15,6 +15,10 @@ int main(void)
 	{
 		for (b = 49; b < 58; b++)
 		{
+			if ( a == b )
+			{
+				continue;
+			}
 			putchar(a);
 			putchar(b);
 			if (a == 56 && b == 57)
