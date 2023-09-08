@@ -20,7 +20,7 @@ int main(void)
 		putchar(a);
 		while (b <= 58)
 		{
-			putchat(b);
+			putchar(b);
 			++b;
 		}
 		if (a == 56 && b == 57)
