@@ -9,25 +9,26 @@
 int main(void)
 {
 	int a;
-	int b;
+	int b = 49;
 
 	for (a = 48; a < 57; a++)
 	{
-		for (b = 49; b < 58; b++)
+		if (a == b)
 		{
-			if ( a == b )
-			{
-				continue;
-			}
-			putchar(a);
-			putchar(b);
-			if (a == 56 && b == 57)
-			{
-				break;
-			}
-			putchar(',');
-			putchar(' ');
+			continue;
 		}
+		putchar(a);
+		while (b <= 58)
+		{
+			putchat(b);
+			++b;
+		}
+		if (a == 56 && b == 57)
+		{
+			break;
+		}
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
