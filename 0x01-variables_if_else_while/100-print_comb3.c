@@ -8,20 +8,22 @@
 
 int main(void)
 {
-	int a = 48;
-	int b = 49;
+	int a;
+	int b;
 
-	while (a < 57)
+	for (a = 47; a < 57; a++)
 	{
-		while (b < 58)
+		for (b = 48; b < 58; b++)
 		{
 			putchar(a);
 			putchar(b);
+			if (a == 56 && b == 57)
+			{
+				break;
+			}
 			putchar(',');
 			putchar(' ');
-			++b;
 		}
-		++a;
 	}
 	putchar('\n');
 	return (0);
