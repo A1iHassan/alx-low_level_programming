@@ -21,6 +21,17 @@ int main(void)
 			{
 				for (d = b + 1; d < 58; d++)
 				{
+					putchar(a);
+					putchar(b);
+					putchar(' ');
+					putchar(c);
+					putchar(d);
+					if (a == 57 && b == 56)
+					{
+						break;
+					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
