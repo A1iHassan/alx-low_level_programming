@@ -21,8 +21,6 @@ int main(void)
 			{
 				for (d = b + 1; d < 58; d++)
 				{
-					putchar(',');
-					putchar(' ');
 				}
 			}
 		}
