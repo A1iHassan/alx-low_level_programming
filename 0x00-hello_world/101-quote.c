@@ -1,7 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
 /**
- *
  * main - Entry
  *
  * Describtion: bla bla bla
