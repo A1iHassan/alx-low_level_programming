@@ -12,9 +12,8 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		char x = (char)i;
-		putchar(x);
+		printf(i);
 	}
-	putchar('\n');
+	printf('\n');
 	return (0);
 }
