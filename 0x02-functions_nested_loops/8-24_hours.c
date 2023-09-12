@@ -1,34 +1,12 @@
-#include "main.h"
-
-/**
- * jack_bauer - bla
- * Describtion: bla
- * Return: bla
- */
-
-void jack_bauer(void)
-{
-	char a;
-	char b;
-	char c;
-	char d;
-
-	for (a = '0'; a < '3'; a++)
-	{
-		for (b = '0'; b < '4'; b++)
-		{
-			for (c = '0'; c < '6'; c++)
-			{
-				for (d = '0'; d <= '9'; d++)
-				{
-					_putchar(a);
-					_putchar(b);
-					_putchar(':');
-					_putchar(c);
-					_putchar(d);
-					_putchar('\n');
-				}
-			}
-		}
-	}
-}
+  1 #include "main.h"
+  2 
+  3 /**
+  4  * jack_bauer - bla
+  5  * Describtion: bla
+  6  * Return: bla
+  7  */
+  8 
+  9 void jack_bauer(void)
+ 10 {
+ 33         }
+ 34 }
