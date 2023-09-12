@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_sign(int n) - Entry
+ * print_sign - Entry
  * @n: bla
  * Describtion: bla bla
  * Return: bla bla
