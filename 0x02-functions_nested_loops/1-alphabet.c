@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Entry
+ * print_alphabet - Entry
  * Describtion: bla bla
  * Return: bla bla
  */
@@ -14,5 +14,5 @@ void print_alphabet(void)
 	{
 		_putchar(x);
 	}
-	return;
+	_putchar('\n');
 }
