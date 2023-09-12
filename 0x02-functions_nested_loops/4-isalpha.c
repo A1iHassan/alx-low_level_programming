@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - Entry
- * int c - bla bla
+ * @c: bla bla
  * Describtion: bla bla
  * Return: bla bla
  */
