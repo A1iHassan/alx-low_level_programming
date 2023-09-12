@@ -2,7 +2,7 @@
 
 /**
  * _islower - Entry
- * c - bla bla
+ * @c: bla bla
  * Describtion: bla bla
  * Return: bla bla
  */
