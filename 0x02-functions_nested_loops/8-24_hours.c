@@ -27,14 +27,14 @@ void jack_bauer(void)
 					_putchar(c);
 					_putchar(d);
 					_putchar('\n');
-					if (a == '2' && b == '3')
-					{
-						if (c == '5' && d == '9')
-						{
-							break;
-						}
-					}
 				}
+			}
+		}
+		if (a == '2' && b == '3')
+		{
+			if (c == '5' && d == '9')
+			{
+				break;
 			}
 		}
 	}
