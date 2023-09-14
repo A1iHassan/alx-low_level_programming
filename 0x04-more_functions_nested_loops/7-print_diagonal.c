@@ -2,6 +2,7 @@
 
 /**
  * print_diagonal - bla
+ * @n: bla
  */
 
 void print_diagonal(int n)
