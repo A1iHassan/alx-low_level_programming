@@ -11,11 +11,11 @@ void more_numbers(void)
 	int k;
 	int l;
 
-	for (l == 0; l <= 10; l++)
+	for (l = 0; l <= 10; l++)
 	{
-		for (i == 48; i <= 49; i++)
+		for (i = 48; i <= 49; i++)
 		{
-			for (j == 0; j <= 57; j++)
+			for (j = 0; j <= 57; j++)
 			{
 				if (i == 48)
 					k = j;
