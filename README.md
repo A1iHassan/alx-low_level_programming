@@ -1,1 +1,1 @@
-this is a repo for starting C language learning
+ this is a README.md file 
