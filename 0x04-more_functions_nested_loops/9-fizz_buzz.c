@@ -13,16 +13,16 @@ int main(void)
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 = 0 && i % 5 = 0)
-			print("FizzBuzz");
+			printf("FizzBuzz");
 		else if (i % 3 = 0)
-			print("Fizz");
+			printf("Fizz");
 		else if (i % 5 = 0)
-			print("Buzz");
+			printf("Buzz");
 		else
-			print("%d", i);
+			printf("%d", i);
 		
 		if (i != 100)
-			print(" ");
+			printf(" ");
 	}
-	print("\n");
+	printf("\n");
 }
