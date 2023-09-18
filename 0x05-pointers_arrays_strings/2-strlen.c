@@ -11,7 +11,7 @@ int _strlen(char *s)
 	int i = 0;
 	int j;
 
-	while (true)
+	while (i)
 	{
 		if (*(s + i) == '\0')
 			break;
