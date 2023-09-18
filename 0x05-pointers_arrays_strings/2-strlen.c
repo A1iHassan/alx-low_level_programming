@@ -18,6 +18,7 @@ int _strlen(char *s)
 			break;
 		k = *(s + i);	
 		j += sizeof(k);
+		_putchar(k);
 		i++;
 	}
 	return (j);
