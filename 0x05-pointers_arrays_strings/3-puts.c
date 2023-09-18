@@ -1,7 +1,7 @@
 #include "main.h"
 
-/** 
- * puts - bla
+/**
+ * _puts - bla
  * @str: bla
  */
 
