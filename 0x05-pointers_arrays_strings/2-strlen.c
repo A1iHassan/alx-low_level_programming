@@ -16,9 +16,8 @@ int _strlen(char *s)
 	{
 		if (*(s + i) == '\0')
 			break;
-		k = *(s + i);	
+		k = *(s + i);
 		j += sizeof(k);
-		_putchar(k);
 		i++;
 	}
 	return (j);
