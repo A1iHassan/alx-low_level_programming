@@ -3,7 +3,7 @@
 /**
  * swap_int - bla
  * @a: bla
- * @b:
+ * @b: bla
  */
 
 void swap_int(int *a, int *b)
