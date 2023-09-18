@@ -18,6 +18,8 @@ void puts2(char *str)
 	while (j <= i)
 	{
 		if (j % 2 == 0)
+			if (str[j] == '\0')
+				continue;
 			_putchar(str[j]);
 		j++;
 	}
