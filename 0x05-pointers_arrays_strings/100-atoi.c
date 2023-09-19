@@ -21,11 +21,12 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 			sign = !sign;
-		else if (s[i] >= 48 && s[i] <= 57)
+		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			num[j] = s[i];
 			j++;
-		} else {
+		} else
+		{
 			return (0);
 		}
 	}
