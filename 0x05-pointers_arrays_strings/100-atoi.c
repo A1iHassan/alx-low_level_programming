@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdbool.h>
 
 /**
  * _atoi - bla
@@ -9,35 +8,17 @@
 
 int _atoi(char *s)
 {
-	int i = 0;
-	int j = 0;
-	int result;
-	bool sign = true;
-	char *num;
+	unsigned int num = 0;
+	int sign = 1;
 
-	num = "B";
+	do {
+		if (*s == '-')
+			sign *= -1;
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+		else if (num > 0)
+			break;
+	} while (*s++);
 
-	while (s[i] != '\0')
-	{
-		if (s[i] == '-')
-		{
-			sign = !sign;
-			i++;
-		}
-		else if (s[i] >= '0' && s[i] <= '9')
-		{
-			num[j] = s[i];
-			j++;
-			i++;
-		} else
-		{
-			return (0);
-		}
-	}
-
-	result = (int)*num;
-
-	if (sign == true)
-		result = -result;
-	return (result);
+	return (num * sign);
 }
