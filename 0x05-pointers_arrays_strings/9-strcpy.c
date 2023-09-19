@@ -17,5 +17,5 @@ char *_strcpy(char *dest, char *src)
 		if (src[i] == '\0')
 			break;
 	}
-	_putchar('\n');
+	return (dest);
 }
