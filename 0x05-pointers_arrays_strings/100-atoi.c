@@ -15,6 +15,8 @@ int _atoi(char *s)
 	bool sign = true;
 	char *num;
 
+	num = "B";
+
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
