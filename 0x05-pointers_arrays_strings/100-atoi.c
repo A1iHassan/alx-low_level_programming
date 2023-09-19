@@ -20,11 +20,15 @@ int _atoi(char *s)
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
+		{
 			sign = !sign;
+			i++;
+		}
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			num[j] = s[i];
 			j++;
+			i++;
 		} else
 		{
 			return (0);
