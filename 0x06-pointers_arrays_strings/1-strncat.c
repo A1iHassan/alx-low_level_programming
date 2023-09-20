@@ -1,26 +1,25 @@
 #include "main.h"
 
 /**
- * _strcat - bla
+ * _strncat - bla
  * @dest: bla
  * @src: bla
- * Return: bla
+ * @n: bla
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	char *temp;
 	int i, j, k, l, m;
 
 	i = 0;
 	j = 0;
-	k = 0;
 	l = 0;
 	m = 0;
 
 	while (dest[i] != '\0')
 	{
-		i++
+		i++;
 	}
 
 	while (src[j] != '\0')
@@ -28,26 +27,22 @@ char *_strcat(char *dest, char *src)
 		j++;
 	}
 
-	k = i + j;
-
-	temo = (char*)malloc(k * sizeof(char));
+	if (n <= j)
+		k = i + n;
+	else
+		k = i + j;
 
 	while (l < k)
 	{
 		temp[l] = dest[l];
-
 		if (l == i)
 		{
-			while (m <= l)
-			{
-				temp[l] = src[m];
-				m++;
-				l++;
-			}
+			temp[l] = src[m];
+			m++;
+			l++;
 		}
 		l++;
 	}
-
 	dest = temp;
 	return (dest);
 }
