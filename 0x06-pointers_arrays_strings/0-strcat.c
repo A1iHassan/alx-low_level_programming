@@ -30,7 +30,7 @@ char *_strcat(char *dest, char *src)
 
 	k = i + j;
 
-	temo = (char*)malloc(k * sizeof(char));
+	temp = (char*)malloc(k * sizeof(char));
 
 	while (l < k)
 	{
