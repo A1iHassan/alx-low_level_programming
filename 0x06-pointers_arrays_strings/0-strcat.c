@@ -9,45 +9,23 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *temp;
-	int i, j, k, l, m;
-
-	i = 0;
-	j = 0;
-	k = 0;
-	l = 0;
-	m = 0;
+	char temp[1000000];
+	int i = 0;
+	int j = 0;
 
 	while (dest[i] != '\0')
 	{
-		i++
+		temp[i] = dest[i];
+		i++;
 	}
 
 	while (src[j] != '\0')
 	{
+		temp[i] = src[j];
+		i++;
 		j++;
 	}
-
-	k = i + j;
-
-	temp = (char*)malloc(k * sizeof(char));
-
-	while (l < k)
-	{
-		temp[l] = dest[l];
-
-		if (l == i)
-		{
-			while (m <= l)
-			{
-				temp[l] = src[m];
-				m++;
-				l++;
-			}
-		}
-		l++;
-	}
-
+	temp[i] = '\0';
 	dest = temp;
 	return (dest);
 }
