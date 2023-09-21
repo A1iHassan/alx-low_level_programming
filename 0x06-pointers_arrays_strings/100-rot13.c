@@ -29,4 +29,3 @@ char *rot13(char *x);
 	}
 	return (x);
 }
-
