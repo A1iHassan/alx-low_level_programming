@@ -12,51 +12,27 @@ char *cap_string(char *x)
 
 	while (x[i] != '\0')
 	{
-		if (x[i] == 32)
+		if (x[i] == 32 || (x[i] == 9))
 		{
 			if (x[i + 1] > 96 && x[i + 1] < 122)
 				x[i + 1] -= 32;
-		} else if (x[i] == 9)
+		} else if (x[i] == 10 || x[i] == 44)
 		{
 			if (x[i + 1] > 96 && x[i + 1] < 122)
 				x[i + 1] -= 32;
-		} else if (x[i] == 10)
+		} else if (x[i] == 59 || x[i] == 46)
 		{
 			if (x[i + 1] > 96 && x[i + 1] < 122)
 				x[i + 1] -= 32;
-		} else if (x[i] == 44)
+		} else if (x[i] == 33 || x[i] == 63)
 		{
 			if (x[i + 1] > 96 && x[i + 1] < 122)
 				x[i + 1] -= 32;
-		} else if (x[i] == 59)
+		} else if (x[i] == 34 || x[i] == 40)
 		{
 			if (x[i + 1] > 96 && x[i + 1] < 122)
 				x[i + 1] -= 32;
-		} else if (x[i] == 46)
-		{
-			if (x[i + 1] > 96 && x[i + 1] < 122)
-				x[i + 1] -= 32;
-		} else if (x[i] == 33)
-		{
-			if (x[i + 1] > 96 && x[i + 1] < 122)
-				x[i + 1] -= 32;
-		} else if (x[i] == 63)
-		{
-			if (x[i + 1] > 96 && x[i + 1] < 122)
-				x[i + 1] -= 32;
-		} else if (x[i] == 34)
-		{
-			if (x[i + 1] > 96 && x[i + 1] < 122)
-				x[i + 1] -= 32;
-		} else if (x[i] == 40)
-		{
-			if (x[i + 1] > 96 && x[i + 1] < 122)
-				x[i + 1] -= 32;
-		} else if (x[i] == 41)
-		{
-			if (x[i + 1] > 96 && x[i + 1] < 122)
-				x[i + 1] -= 32;
-		} else if (x[i] == 123)
+		} else if (x[i] == 41 || x[i] == 123)
 		{
 			if (x[i + 1] > 96 && x[i + 1] < 122)
 				x[i + 1] -= 32;
