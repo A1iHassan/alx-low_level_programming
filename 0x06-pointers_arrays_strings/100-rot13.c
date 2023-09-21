@@ -6,7 +6,7 @@
  * Return: bla
  */
 
-char *rot13(char *x);
+char *rot13(char *x)
 {
 	char *a;
 	char *b;
