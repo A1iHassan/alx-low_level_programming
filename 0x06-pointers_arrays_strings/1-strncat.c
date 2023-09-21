@@ -5,6 +5,7 @@
  * @dest: bla
  * @src: bla
  * @n: bla
+ * Return: bla
  */
 
 char *_strncat(char *dest, char *src, int n)
