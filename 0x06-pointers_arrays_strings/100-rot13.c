@@ -27,6 +27,6 @@ char *rot13(char *x);
 		}
 		i++;
 	}
-	return (0);
+	return (x);
 }
 
