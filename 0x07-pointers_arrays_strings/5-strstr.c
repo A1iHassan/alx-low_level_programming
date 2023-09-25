@@ -9,15 +9,18 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	while (*haystack) {
+	while (*haystack)
+	{
 		char *start = haystack;
 
-		while (*haystack && *needle && *haystack == *needle) {
+		while (*haystack && *needle && *haystack == *needle)
+		{
 			haystack++;
 			needle++;
 		}
 
-		if (!*needle) {
+		if (!*needle)
+		{
 			return (start);
 		}
 
