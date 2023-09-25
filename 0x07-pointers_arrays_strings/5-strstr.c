@@ -9,11 +9,11 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	char *start;
+	char *i;
 
 	while (*haystack)
 	{
-		start = haystack;
+		i = haystack;
 
 		while (*haystack && *needle && *haystack == *needle)
 		{
@@ -26,8 +26,8 @@ char *_strstr(char *haystack, char *needle)
 			return (start);
 		}
 
-		haystack = start + 1;
-		needle = needle - (haystack - start);
+		haystack = i + 1;
+		needle = needle - (haystack - i);
 	}
 
 	return (NULL);
