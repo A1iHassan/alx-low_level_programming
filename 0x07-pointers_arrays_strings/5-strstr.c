@@ -19,14 +19,14 @@ char *_strstr(char *haystack, char *needle)
 		string = haystack;
 		substring = needle;
 
-		while (*string == *substring && *substring >= '\0')
+		while (*string == *substring && *substring != '\0')
 		{
 			string++;
 			substring++;
 
-			if (substring == '\0')
-				return (haystack);
 		}
+		if (*substring == '\0')
+			return (haystack);
 		haystack++;
 	}
 	return ('\0');
