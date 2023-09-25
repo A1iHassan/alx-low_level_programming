@@ -9,11 +9,13 @@
 
 char *_strchr(char *s, char c)
 {
+	char *temp = NULL;
+
 	while (*s != '\0')
 	{
 		if (*s == c)
 			return (s);
 		s++;
 	}
-	return (NULL);
+	return (temp);
 }
