@@ -21,13 +21,12 @@ char *_strstr(char *haystack, char *needle)
 			needle++;
 		}
 
-		if (*needle != '\0')
+		if (*needle == '\0')
 		{
 			return (i);
 		}
 
-		haystack = i + 1;
-		needle = needle - (haystack - i);
+		haystack++;
 	}
 
 	return (NULL);
