@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _strstr - bla
- * @haystack: bla
- * @needle: bla
- * Return: bla
+ * _strstr - entry point to the code
+ * @haystack: main string
+ * @needle: substring
+ * Return: null or main string indicator5
  */
 
 char *_strstr(char *haystack, char *needle)
@@ -13,9 +13,6 @@ char *_strstr(char *haystack, char *needle)
 
 	while (*haystack != '\0')
 	{
-		if (*haystack != *needle)
-			continue;
-
 		string = haystack;
 		substring = needle;
 
