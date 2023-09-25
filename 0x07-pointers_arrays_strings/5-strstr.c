@@ -3,7 +3,7 @@
 /**
  * _strstr - bla
  * @haystack: bla
- * @haystack: bla
+ * @needle: bla
  * Return: bla
  */
 
