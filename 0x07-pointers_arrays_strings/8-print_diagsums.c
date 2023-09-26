@@ -1,4 +1,3 @@
-#include "main"
 #include <stdio.h>
 
 /**
@@ -9,22 +8,19 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i = 0;
 	int sum1 = 0;
 	int sum2 = 0;
+	int i;
 
-	while (i < size)
+	for (i = 0; i < size; i++)
 	{
-		sum1 += a[i * size + i];
-		i++;
+		x1 += a[i * size + i];
 	}
 
-	i = size - 1;
-
-	while (i >= 0)
+	for (i = size - 1; i >= 0; i--)
 	{
 		sum2 += a[i * size + (size - i - 1)];
-		i--;
 	}
+
 	printf("%d, %d\n", sum1, sum2);
-}	
+}
