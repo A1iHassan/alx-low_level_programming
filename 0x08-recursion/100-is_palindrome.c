@@ -1,6 +1,22 @@
 #include "main.h"
 
 /**
+ * _strlen - calculates the length of a string
+ * @s: string
+ * Return: a value of int
+ */
+
+int _strlen(char *s)
+{
+	int l = 1;
+	if (*s != '\0')
+	{
+		l += _strlen(s + 1);
+	}
+	return (l);
+}
+
+/**
  * s_palindrome - check if a string is a plaindrome
  * @s: a given string
  * Return: a value of type int
@@ -8,15 +24,12 @@
 
 int is_palindrome(char *s)
 {
-	int i = 0;
+	int i;
 	if (*s == '\0')
 	{
 		return 1;
 	}
-	while (*s != '\0')
-	{
-		i++;
-	}
+	i = _strlen(s) - 1;
 
 	if (*s != s[i - 1])
 	{
