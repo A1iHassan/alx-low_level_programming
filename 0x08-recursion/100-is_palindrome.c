@@ -9,6 +9,7 @@
 int _strlen(char *s)
 {
 	int l = 1;
+
 	if (*s != '\0')
 	{
 		l += _strlen(s + 1);
@@ -25,16 +26,17 @@ int _strlen(char *s)
 int is_palindrome(char *s)
 {
 	int i;
+
 	if (*s == '\0')
 	{
-		return 1;
+		return (1);
 	}
 	i = _strlen(s) - 1;
 
 	if (*s != s[i - 1])
 	{
-		return 0;
+		return (0);
 	}
 
-	return is_palindrome(s + 1);
+	return (is_palindrome(s + 1));
 }
