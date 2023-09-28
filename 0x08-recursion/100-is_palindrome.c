@@ -18,7 +18,7 @@ int _strlen(char *s)
 }
 
 /**
- * s_palindrome - check if a string is a plaindrome
+ * is_palindrome - check if a string is a plaindrome
  * @s: a given string
  * Return: a value of type int
  */
