@@ -12,6 +12,9 @@ int main(int argc, char **argv)
 {
 	int i, j, sum;
 
+	(void)sum;
+	(void)j;
+
 	if (argc > 2)
 	{
 		printf("Error\n");
