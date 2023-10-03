@@ -9,8 +9,6 @@
 
 int change(int x)
 {
-	int sum = 0;
-
 	if (x / 25 > 0)
 		return (x / 25 + change(x % 25));
 	else if (x / 10 > 0)
