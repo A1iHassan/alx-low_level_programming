@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int to_int(char *x)
-{
-	return (*x - '0');
-}
-
 /**
  * main - calculates the multiplication of two given numbers
  * @argc: number of given arguments
@@ -22,8 +17,8 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	} else {
-		i = to_int(argv[1]);
-		j = to_int(argv[2]);
+		i = atoi(argv[1]);
+		j = atoi(argv[2]);
 		printf("%d\n", i * j);
 		return (0);
 	}
