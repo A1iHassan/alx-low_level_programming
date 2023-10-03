@@ -19,6 +19,7 @@ int change(int x)
 		return (x / 2 + change(x % 2));
 	else if (x / 1 > 0)
 		return (x / 1);
+	return (0);
 }
 
 /**
