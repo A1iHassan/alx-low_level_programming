@@ -1,4 +1,23 @@
 #include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * _strlen - calculates the length of a string
+ * @s: a given string
+ * Return: value of type int
+ */
+
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+	return (i);
+}
 
 /**
  * str_concat - concatenates to given strings
@@ -13,17 +32,19 @@ char *str_concat(char *s1, char *s2)
 	int i, j;
 	int k = 0;
 
-	while (*s1)
-	{
-		i++;
-		s1++;
-	}
-	while (*s2)
-	{
-		j++;
-		s2++;
-	}
-	a = malloc(sizeof(char) * (i + j + 2));
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	i = _strlen(s1);
+	j = _strlen(s2);
+
+	printf("%d %d\n", i, j);
+
+	a = malloc(sizeof(char) * (i + j + 1));
+
+	printf("%ld\n", sizeof(a));
 	if (a == 0)
 		return (NULL);
 	while (*s1)
