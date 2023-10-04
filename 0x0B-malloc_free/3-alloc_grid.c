@@ -27,15 +27,12 @@ int **alloc_grid(int width, int height)
 	while (l < k)
 	{
 		a[l] = malloc(sizeof(int) * width);
-		printf("created line %d\n", l);
 		l++;
 	}
 	while (i < height)
 	{
-		printf("on line %d\n", i);
 		while (j < width)
 		{
-			printf("at element %d\n", j);
 			a[i][j] = 0;
 			j++;
 		}
