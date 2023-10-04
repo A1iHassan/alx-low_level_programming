@@ -40,11 +40,8 @@ char *str_concat(char *s1, char *s2)
 	i = _strlen(s1);
 	j = _strlen(s2);
 
-	printf("%d %d\n", i, j);
-
 	a = malloc(sizeof(char) * (i + j + 1));
 
-	printf("%ld\n", sizeof(a));
 	if (a == 0)
 		return (NULL);
 	while (*s1)
