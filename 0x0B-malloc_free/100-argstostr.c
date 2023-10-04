@@ -22,8 +22,10 @@ int _strlen(char *s)
 char *argstostr(int ac, char **av)
 {
 	int sum = 0;
-	int i, j;
+	int i, j, k;
 	char *a;
+
+	k = 0;
 
 	if (ac == 0 || av == 0)
 		return (NULL);
@@ -38,8 +40,12 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
-			a[i][j] = av[i][j];
+		{
+			a[k] = av[i][j];
+			k++;
+		}
+		a[k] = '\n';
+		k++;
 	}
 	return (a);
 }
-
