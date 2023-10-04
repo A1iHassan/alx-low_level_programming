@@ -2,6 +2,23 @@
 #include <stdio.h>
 
 /**
+ * _strlen - calculates the length of a given string
+ * @s: the given string
+ * Return: a value of type int
+ */
+
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (*s != '\0')
+	{
+		i++;
+		s++;
+	}
+	return (i);
+}
+/**
  * _strdup - copies a given string to a newly allocated memory
  * @str: the given string
  * Return: a value of type char *
@@ -15,7 +32,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	a = malloc(sizeof(str));
+	a = malloc(sizeof(char) * _strlen(str));
 
 	if (a == NULL)
 		return (0);
