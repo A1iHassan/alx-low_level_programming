@@ -1,5 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
+
+/**
+ * _strlen - calculates the length of a string
+ * @s: the given string
+ * Return: a value of type int
+ */
+
 int _strlen(char *s)
 {
 	int i = 0;
@@ -34,7 +41,7 @@ char *argstostr(int ac, char **av)
 		sum += _strlen(av[i]);
 		sum++;
 	}
-	a = malloc(sizeof(char) * sum);
+	a = malloc(sizeof(char) * sum + 1);
 	if (a == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
