@@ -16,7 +16,7 @@ char **strtow(char *str)
 	int n = 1;
 	char **a;
 
-	if (str == " " || str == "")
+	if (str == NULL)
 		return (NULL);
 
 	while (*str != '\0')
