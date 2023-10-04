@@ -9,30 +9,20 @@
 
 char **strtow(char *str)
 {
-	int i = 0;
-	int k = 0;
-	int l;
-	int m = 0;
-	int n = 1;
+	int l, i = 0, k = 0, m = 0, n = 1;
 	char **a;
-
 	if (str == NULL)
 		return (NULL);
-
 	while (*str != '\0')
 	{
 		if (*str == ' ')
 			i++;
 		str++;
 	}
-	
 	i++;
-
 	a = malloc(sizeof(char *) * i + sizeof(char *));
-	
 	if (a == NULL)
 		return (NULL);
-
 	while (*str != '\0')
 	{
 		if (*str == ' ')
