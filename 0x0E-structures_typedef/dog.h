@@ -1,3 +1,6 @@
+#ifndef DOG_H
+#define DOG_H
+
 /**
  * struct dog - defines dog
  * @name: first member, holds the dog name
@@ -6,8 +9,11 @@
  * Describtion: a data type of dog that holds important informations about the dog
  */
 
-struct dog {
+struct dog
+{
 	char *name;
 	char *owner;
 	float age;
 };
+
+#endif
