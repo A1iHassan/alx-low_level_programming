@@ -9,12 +9,12 @@
  * Describtion: a data type of dog that holds important informations
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	char *owner;
 	float age;
-};
+}dog_t;
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 
