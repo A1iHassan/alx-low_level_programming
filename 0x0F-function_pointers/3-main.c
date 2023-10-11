@@ -18,13 +18,11 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-	printf("right arguments\n");
 	if (*argv[3] == '0' && (*argv[2] == '/' || *argv[2] == '%'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("right oprator\n");
 
 	i = atoi(argv[1]);
 	j = atoi(argv[3]);
