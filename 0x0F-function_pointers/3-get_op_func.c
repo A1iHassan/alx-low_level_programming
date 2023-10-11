@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * get_op_func - selects the suitable function
+ * @s: operator
+ * Return: a value of type int
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {

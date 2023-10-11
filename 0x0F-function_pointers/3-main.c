@@ -2,9 +2,17 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * main - does an operation over umbers
+ * @argc: number of arguments
+ * @argv: vector of arguments
+ * Return: a value of type int
+ */
+
 int main(int argc, char **argv)
 {
 	int i, j, k;
+
 	if (argc != 4)
 	{
 		printf("Error\n");
