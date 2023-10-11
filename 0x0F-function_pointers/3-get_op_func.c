@@ -13,14 +13,16 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}};
 	int i = 0;
 
+	printf("%s\n", s);
+
 	while (i < 5)
 	{
-		if (ops[i].op == s)
+		if (ops[i].op[0] == *s)
 		{
 			return (ops[i].f);
 		}
 		i++;
 	}
-	printf("Error\n");
+	printf("Error 3\n");
 	exit(99);
 }
