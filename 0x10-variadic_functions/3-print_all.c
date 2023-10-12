@@ -30,8 +30,7 @@ void print_all(const char * const format, ...)
 				a = va_arg(args, char *);
 				if (a == NULL)
 					printf("(ni)");
-				else
-					printf("%s", a);
+				printf("%s", a);
 				break;
 			default:
 				break;
