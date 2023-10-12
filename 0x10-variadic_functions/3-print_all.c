@@ -29,7 +29,10 @@ void print_all(const char * const format, ...)
 			case 's':
 				a = va_arg(args, char *);
 				if (a == NULL)
+				{
 					printf("(ni)");
+					break;
+				}
 				printf("%s", a);
 				break;
 			default:
