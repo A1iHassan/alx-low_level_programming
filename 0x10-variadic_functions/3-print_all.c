@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		b++;
-		if (*b)
+		if (*b && (*b == 'c' || *b == 'f' || *b == 'i' || *b == 's'))
 			printf(", ");
 	}
 	printf("\n");
