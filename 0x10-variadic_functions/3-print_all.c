@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * print_all - prints all given arguments
@@ -28,9 +29,9 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				a = va_arg(args, char *);
-				if (a == NULL)
+				if (!strlen(a))
 				{
-					printf("(ni)");
+					printf("(nil)");
 					break;
 				}
 				printf("%s", a);
