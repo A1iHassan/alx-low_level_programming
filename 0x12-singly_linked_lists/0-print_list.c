@@ -4,6 +4,12 @@
 #include <string.h>
 #include <stddef.h>
 
+/**
+ * print_list - prints list's elements
+ * @h: node pointer
+ * Return: nodes count
+ */
+
 size_t print_list(const list_t *h)
 {
 	if (h == NULL)
