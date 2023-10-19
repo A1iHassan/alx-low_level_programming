@@ -1,0 +1,21 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+list_t *add_node(list_t **head, const char *str)
+{
+	unsigned i;
+	list_t *temp;
+
+	temp = malloc(sizeof(list_t));
+	if (temp == NULL)
+		return (NULL);
+
+	temp->str = strdup(str);
+	temp->len = strlen(str);
+	temp->next = h->next;
+	h->next = temp;
+
+	return(temp);
+}
