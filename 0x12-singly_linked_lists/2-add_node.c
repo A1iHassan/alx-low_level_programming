@@ -5,7 +5,7 @@
 
 /**
  * add_node - adds a node to a list
- * @h: node's address
+ * @head: node's address
  * @str: node's string content
  * Return: new node's address
  */
