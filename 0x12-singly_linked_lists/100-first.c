@@ -18,5 +18,5 @@ void pre_main(void)
 __attribute__((constructor))
 void run_pre_main(void)
 {
-	pre_main_function();
+	pre_main();
 }
