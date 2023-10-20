@@ -1,16 +1,22 @@
 #include <stdio.h>
 
 /**
- * main - prints a statement
- * Return: a value of type int
+ * pre_main - prints some content
  */
 
-int main(void)
+void pre_main(void)
 {
 	char *a = "You're beat! and yet, you must allow,\n";
 
 	printf("%sI bore my house upon my back!\n", a);
-	main();
-	return (0);
 }
 
+/**
+ * run_pre_main - calls functions before main function
+ */
+
+__attribute__((constructor))
+void run_pre_main(void)
+{
+	pre_main_function();
+}
