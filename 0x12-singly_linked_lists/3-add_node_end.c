@@ -3,6 +3,13 @@
 #include <stdio.h>
 #include "lists.h"
 
+/**
+ * add_node_end - appends a new cell at the end of a given list
+ * @head: points the list head
+ * @str: new cell's content
+ * Return: value of type list_t *
+ */
+
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node, *temp;
