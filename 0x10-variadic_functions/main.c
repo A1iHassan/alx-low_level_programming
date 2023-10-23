@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	print_all("ceis", 'B', 3, "");
+	print_all("ceeeis", 'b', 3, "it works");
 	return (0);
 }
