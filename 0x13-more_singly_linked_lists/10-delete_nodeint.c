@@ -40,8 +40,39 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		cursor = cursor->next;
 	return (cursor);
 }
+
+/**
+ * delete_nodeint_at_index - deletes a node at a given index in a list
+ * @head: list head
+ * @index: desired node index
+ * Return: success or failure indecator
+ */
+
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i = listint_len(*head);
+	listint_t *temp, *cursor;
 
+	if (!*head || i < index)
+		return (-1);
 
+	if (index == 0)
+	{
+		temp = *head;
+		*head = temp->next;
+		free(temp);
+		return (1);
+	}
+
+	cursor = get_nodeint_at_index(*head, index - 1);
+	if (!cursor)
+	{
+		free(cursor);
+		return (-1);
+	}
+
+	temp = cursor->next;
+	cursor->next = cursor->next->next;
+	free(temp);
+	return (1);
+}
