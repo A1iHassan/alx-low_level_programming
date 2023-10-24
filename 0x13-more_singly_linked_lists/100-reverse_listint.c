@@ -75,8 +75,7 @@ listint_t *reverse_listint(listint_t **head)
 
 	while (i > 0)
 	{
-		swap_node(get_nodeint_at_index(*head, j),
-				get_nodeint_at_index(*head, (unsigned int)listint_len(*head) - j - 1));
+		swap_node(get_nodeint_at_index(*head, j),get_nodeint_at_index(*head, (unsigned int)listint_len(*head) - j - 1));
 		j++;
 		i--;
 	}
