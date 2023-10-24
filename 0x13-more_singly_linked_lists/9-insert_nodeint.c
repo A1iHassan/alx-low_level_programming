@@ -52,7 +52,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int i = (unsigned int)listint_len(*head);
-	listint_t *cursor_after, *cursor_before, *temp;
+	listint_t *cursor, *temp;
 
 	if ((!*head && i != 0) || i < idx)
 		return (NULL);
@@ -72,20 +72,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (temp);
 	}
 
-	cursor_after = get_nodeint_at_index(*head, idx);
-	if (!cursor_after)
+	cursor = get_nodeint_at_index(*head, idx - 1);
+	if (!cursor)
 	{
-		free(cursor_after);
-		return (NULL);
-	}
-	cursor_before = get_nodeint_at_index(*head, idx - 1);
-	if (!cursor_before)
-	{
-		free(cursor_before);
+		free(cursor);
 		return (NULL);
 	}
 
-	temp->next = cursor_after;
-	cursor_before->next = temp;
+	temp->next = cursor->next;
+	cursor->next = temp;
 	return (temp);
 }
