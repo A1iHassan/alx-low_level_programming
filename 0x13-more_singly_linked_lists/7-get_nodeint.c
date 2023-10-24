@@ -28,7 +28,7 @@ size_t listint_len(const listint_t *h)
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	unsigned int i = (unsigned)listint_len(head);
+	unsigned int i = (unsigned int)listint_len(head);
 	int j;
 	listint_t *cursor;
 
@@ -39,4 +39,4 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	for (j = index; j > 0; j--)
 		cursor = cursor->next;
 	return (cursor);
-}	
+}
