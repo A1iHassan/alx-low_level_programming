@@ -32,7 +32,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	int j;
 	listint_t *cursor;
 
-	if (!head || i < index - 1)
+	if (!head || i < index)
 		return (NULL);
 
 	cursor = head;
