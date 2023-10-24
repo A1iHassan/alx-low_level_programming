@@ -1,6 +1,6 @@
 #include "lists.h"
 
-listint_t *reverse_listint(list_t **head)
+listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *cursor1, *cursor2;
 
