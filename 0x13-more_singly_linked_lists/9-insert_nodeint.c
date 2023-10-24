@@ -74,10 +74,16 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	cursor_after = get_nodeint_at_index(*head, idx);
 	if (!cursor_after)
+	{
+		free(cursor_after);
 		return (NULL);
+	}
 	cursor_before = get_nodeint_at_index(*head, idx - 1);
 	if (!cursor_before)
+	{
+		free(cursor_before);
 		return (NULL);
+	}
 
 	temp->next = cursor_after;
 	cursor_before->next = temp;
