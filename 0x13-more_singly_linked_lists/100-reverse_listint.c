@@ -6,7 +6,7 @@ listint_t *reverse_listint(listint_t **head)
 
 	cursor1 = NULL;
 
-	while (!*head)
+	while (*head)
 	{
 		cursor2 = (*head)->next;
 		(*head)->next = cursor1;
