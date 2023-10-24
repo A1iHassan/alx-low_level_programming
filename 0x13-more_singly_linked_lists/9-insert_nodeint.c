@@ -70,7 +70,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		temp->next = *head;
 		*head = temp;
 		return (temp);
-	}		
+	}
 
 	cursor_after = get_nodeint_at_index(*head, idx);
 	if (!cursor_after)
