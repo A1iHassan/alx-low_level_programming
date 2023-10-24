@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+ * reverse_listint - reverses nodes order in a list
+ * @head: list head
+ * Return: reversed list pointer
+ */
+
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *cursor1, *cursor2;
