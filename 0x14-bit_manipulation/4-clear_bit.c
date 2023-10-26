@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 
 /**
  * clear_bit - clears a bit at a given index
@@ -10,7 +9,7 @@
 
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int i = ULONG_MAX;
+	unsigned long int i = 18446744073709551615;
 
 	if (index > 63)
 		return (-1);
