@@ -9,14 +9,15 @@
 
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int i = 0xffffffff;
+	unsigned long int i = 0;
 
 	if (index > 63)
 		return (-1);
 
 	i = i >> index;
-	i = i & 0;
+	i = i | 1;
 	i = i << index;
+	i = ~i;
 	*n = *n & i;
 	return (1);
 }
