@@ -3,9 +3,9 @@
 
 int main(void)
 {
-	char a = 'a', b = 'b';
-	int i = b - a;
+	int i = 99, j = 1;
+	int k = i & j;
 
-	printf("%lu  %d\n", sizeof(unsigned int), i);
+	printf("%d\n", k);
 	return (0);
 }
