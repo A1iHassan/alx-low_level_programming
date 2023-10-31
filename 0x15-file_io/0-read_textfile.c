@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdio.h>
 
 /**
  * read_textfile - reads texts from a given file
@@ -12,8 +13,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char buffer[BUFSIZ];
-	ssize_t bytes_read = 0;
-	ssize_t bytes_written = 0;
+	size_t bytes_read = 0;
+	size_t bytes_written = 0;
 
 	if (filename == NULL)
 		return (0);
