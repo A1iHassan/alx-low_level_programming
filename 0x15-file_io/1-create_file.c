@@ -20,10 +20,19 @@ int _strlen(char *s)
 	return (i);
 }
 
+/**
+ * create_file - creates new file with given name and contenet
+ * @filename: file name
+ * @text_content: file content
+ * Return: a value of type int
+ */
+
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
 	struct stat st;
+	ssize_t bytes_written;
+
 	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (filename == NULL)
@@ -39,7 +48,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		ssize_t bytes_written = write(fd, text_content, _strlen(text_content));
+		bytes_written = write(fd, text_content, _strlen(text_content));
 		if (bytes_written != _strlen(text_content))
 		{
 			close(fd);
