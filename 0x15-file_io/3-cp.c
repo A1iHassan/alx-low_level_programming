@@ -1,78 +1,75 @@
-#include <unistd.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <errno.h>
+#include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
-
-#define BUF_SIZE 1024
 
 /**
- * copy_file - copies content from file to file
- * @file_from: source
- * @file_to: destination
- * Return: a value of type int
+ * err - detects currupted files
+ * @source: given content
+ * @dest: desired destination
+ * @argv: arguments vector.
  */
 
-int copy_file(const char *file_from, const char *file_to)
+
+void err(int source, int dest, char *argv[])
 {
-	int fd_src, fd_dst;
-	char buffer[BUF_SIZE];
-	ssize_t bytes_read, bytes_written;
-
-	fd_src = open(file_from, O_RDONLY);
-	if (fd_src < 0)
+	if (source == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-		return (98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
-	fd_dst = open(file_to, O_WRONLY | O_TRUNC);
-	if (fd_dst < 0)
+	if (dest == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", file_to);
-		return (99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
 	}
-	if (fd_dst < 0)
-	{
-		fd_dst = open(file_to, O_WRONLY | O_CREAT);
-		if (fd_dst < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't create file %s\n", file_to);
-			return (99);
-		}
-	}
-	while ((bytes_read = read(fd_src, buffer, BUF_SIZE)) > 0)
-	{
-		bytes_written = write(fd_dst, buffer, bytes_read);
-		if (bytes_written < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
-			return (99);
-		}
-	}
-	close(fd_src);
-	close(fd_dst);
-
-	return (0);
 }
 
 /**
  * main - program entry
- * @argc: number of arguments
- * @argv: vector of arguments
- * Return: 0
+ * @argc: number of arguments.
+ * @argv: arguments vector.
+ * Return: a value of type int
  */
+
 
 int main(int argc, char *argv[])
 {
-	int result;
+	int source, dest, i;
+	ssize_t count, j;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
-	result = copy_file(argv[1], argv[2]);
-	exit(result);
+
+	source = open(argv[1], O_RDONLY);
+	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	err(source, dest, argv);
+
+	count = 1024;
+	while (count == 1024)
+	{
+		count = read(source, buffer, 1024);
+		if (count == -1)
+			err(-1, 0, argv);
+		j = write(dest, buffer, count);
+		if (j == -1)
+			err(0, -1, argv);
+	}
+
+	i = close(source);
+	if (i == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source);
+		exit(100);
+	}
+
+	i = close(dest);
+	if (i == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source);
+		exit(100);
+	}
 	return (0);
 }
