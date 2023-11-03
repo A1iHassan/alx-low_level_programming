@@ -1,3 +1,4 @@
+#include "main.h"
 #include <unistd.h>
 #include <elf.h>
 #include <stdint.h>
