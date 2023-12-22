@@ -19,13 +19,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 
-	if (strcmp(ht->array[x]->key, key) == 0)
-	{
-		ht->array[x]->value = strdup(value);
-		free(temp);
-		return (1);
-	}
-
 	if (!temp)
 	{
 		while (ht->size)
@@ -43,8 +36,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		temp->next = ht->array[x];
-		ht->array[x] = temp;
+		if (strcmp(ht->array[x]->key, key) == 0)
+		{
+			ht->array[x]->value = strdup(value);
+			free(temp);
+			return (1);
+		}
+		else
+		{
+			temp->next = ht->array[x];
+			ht->array[x] = temp;
+		}
 	}
 	return (1);
 }
