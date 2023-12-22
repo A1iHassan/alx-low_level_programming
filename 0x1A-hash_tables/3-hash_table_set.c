@@ -28,8 +28,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!temp)
 	{
-		while (x)
-			free(ht->array[--x]);
+		while (ht->size)
+			free(ht->array[--(ht->size)]);
 		free(ht);
 		return (0);
 	}
