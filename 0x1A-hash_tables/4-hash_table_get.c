@@ -12,6 +12,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int i;
 	hash_node_t *temp;
 
+	if (ht == NULL || key == NULL || ht->array == NULL || ht->size == 0)
+    return (NULL);
+		
 	for (i = 0; i < ht->size; i++)
 	{
 		if (ht->array[i] != NULL)
