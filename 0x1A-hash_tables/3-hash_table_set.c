@@ -24,21 +24,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     {
         if (strcmp(current->key, key) == 0)
         {
-            // Key already exists, update the value (free the old value first)
             free(current->value);
             current->value = strdup(value);
 
             if (current->value == NULL)
-                return 0; // strdup failed
-            return 1;     // Success
+                return 0;
+            return 1;
         }
         current = current->next;
     }
 
-    // Key not found, create a new node
     new_node = malloc(sizeof(hash_node_t));
     if (new_node == NULL)
-        return 0; // malloc failed
+        return 0;
 
     new_node->key = strdup(key);
     new_node->value = strdup(value);
@@ -48,12 +46,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         free(new_node->key);
         free(new_node->value);
         free(new_node);
-        return 0; // strdup failed
+        return 0;
     }
 
-    // Add the new node at the beginning of the list
     new_node->next = ht->array[index];
     ht->array[index] = new_node;
 
-    return 1; // Success
+    return 1;
 }
