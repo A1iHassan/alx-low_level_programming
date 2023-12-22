@@ -15,18 +15,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (ht == NULL || key == NULL || ht->array == NULL || ht->size == 0)
 		return (NULL);
 
-	for (i = 0; i < ht->size; i++)
+	i = key_index(key, ht->size);
+	
+	temp = ht->array[i];
+	while (temp != NULL)
 	{
-		if (ht->array[i] != NULL)
-		{
-			temp = ht->array[i];
-			while (temp != NULL)
-			{
-				if (strcmp(temp->key, key) == 0)
-					return (temp->key);
-				temp = ht->array[i]->next;
-			}
-		}
+		if (strcmp(temp->key, key) == 0)
+			return (temp->key);
+		temp = ht->array[i]->next;
 	}
 
 	return (NULL);
