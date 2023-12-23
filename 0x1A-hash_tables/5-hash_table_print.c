@@ -10,7 +10,10 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *current;
 
 	if (ht == NULL || ht->array == NULL || ht->size == 0)
+	{
+		printf("{}\n");
 		return;
+	}
 
 	printf("{");
 	for (i = 0; i < ht->size; i++)
